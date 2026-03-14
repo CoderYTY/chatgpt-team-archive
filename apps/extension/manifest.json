@@ -1,0 +1,25 @@
+﻿{
+  "manifest_version": 3,
+  "name": "ChatGPT Team Archive",
+  "version": "0.3.0",
+  "description": "面向 ChatGPT 团队空间的本地优先手动归档扩展。",
+  "permissions": ["storage", "unlimitedStorage", "tabs", "scripting", "downloads"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ChatGPT Team Archive",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT 团队归档查看器</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <main class="shell">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">归档查看器</p>
+          <h1>项目聊天，已经保存在你的电脑里</h1>
+          <p class="lede">浏览已同步会话、全文搜索消息，并在团队空间失效后继续导出项目归档。</p>
+        </div>
+        <form id="searchForm" class="search-panel">
+          <label>
+            <span>全局搜索</span>
+            <input id="searchInput" type="search" placeholder="项目名、会话标题或消息内容">
+          </label>
+          <button type="submit">搜索</button>
+        </form>
+      </section>
+
+      <section class="layout">
+        <aside class="sidebar card">
+          <div class="sidebar-header">
+            <h2>项目</h2>
+            <button id="refreshButton" class="ghost">刷新</button>
+          </div>
+          <div id="projectList" class="project-list"></div>
+        </aside>
+
+        <section class="content card">
+          <div id="summary" class="summary">选择一个会话，查看本地归档内容。</div>
+          <div id="conversationList" class="conversation-list"></div>
+          <article id="conversationDetail" class="conversation-detail"></article>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT 团队归档</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <section class="hero">
+        <p class="eyebrow">手动归档模式</p>
+        <h1>聊天归档面板</h1>
+        <p class="lede">扩展不会自动记录任何普通对话。只有你手动点击记录时，当前聊天才会保存到浏览器本地。</p>
+      </section>
+
+      <section class="hero note-box">
+        <p class="eyebrow">存储方式</p>
+        <p class="lede">现在不需要启动本地服务，归档数据直接保存在这个浏览器的扩展本地存储里。</p>
+      </section>
+
+      <label class="field">
+        <span>当前聊天</span>
+        <input id="currentChatTitle" type="text" value="正在读取..." disabled>
+      </label>
+
+      <label class="field">
+        <span>归档名称（可自定义）</span>
+        <input id="archiveTitle" type="text" placeholder="例如：八股文面试题 - 第一轮">
+      </label>
+
+      <div class="actions">
+        <button id="refreshContextButton" class="primary">读取当前聊天信息</button>
+        <button id="backupButton">记录当前聊天</button>
+        <button id="viewerButton">打开归档查看器</button>
+      </div>
+
+      <section class="status">
+        <p class="eyebrow">最近状态</p>
+        <pre id="statusText">等待手动归档...</pre>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

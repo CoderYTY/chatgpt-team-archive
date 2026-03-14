@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>聊天归档查看器</title>
+    <link rel="stylesheet" href="archive.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero card">
+        <div>
+          <p class="eyebrow">浏览器本地归档</p>
+          <h1>聊天归档查看器</h1>
+          <p class="lede">所有记录都保存在当前浏览器扩展本地。你可以搜索、改名、查看内容，并直接导出 Markdown。</p>
+        </div>
+        <div class="hero-actions">
+          <input id="searchInput" type="search" placeholder="搜索项目名、归档名、原始标题或消息内容">
+          <button id="refreshButton">刷新列表</button>
+        </div>
+      </section>
+
+      <section class="stats card" id="statsBar"></section>
+
+      <section class="layout">
+        <aside class="sidebar card">
+          <div class="section-head">
+            <h2>项目</h2>
+          </div>
+          <div id="projectList" class="project-list"></div>
+        </aside>
+
+        <section class="content">
+          <div class="section-head card compact">
+            <div>
+              <h2>会话</h2>
+              <p id="resultSummary" class="muted">正在加载归档...</p>
+            </div>
+          </div>
+          <div id="conversationList" class="conversation-list"></div>
+        </section>
+      </section>
+    </main>
+    <script src="archive.js"></script>
+  </body>
+</html>
